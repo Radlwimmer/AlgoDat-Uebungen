@@ -1,5 +1,5 @@
 
-#---exercize 1---
+#---exercise 1---
 def power(a:int,b:int):
     # multiply a with itself recursively until b becomes 1
     if b > 1:
@@ -18,7 +18,7 @@ b = 3
 #print(f"{a}^{b} = {power(a,b)}")
 
 
-#---exercize 2---
+#---exercise 2---
 
 def binary_search(numbers:list,num:int,start:int,end:int):
     #check whether number is in list
