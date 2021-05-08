@@ -13,9 +13,9 @@ def power(a:int,b:int):
         return -1
 
 a = 2
-b = 3
+b = 10
 
-#print(f"{a}^{b} = {power(a,b)}")
+print(f"{a}^{b} = {power(a,b)}")
 
 
 #---exercize 2---
