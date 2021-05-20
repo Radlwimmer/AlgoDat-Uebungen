@@ -28,17 +28,23 @@ x = 6
 #---excercise 2---
 
 def bubble_sort(numbers:list):
+    #set condition for while loop (do while)
     bool = True
     while bool:
+        # set loop to terminate unless something happens (if there was no swap necessary in the last round, the list is ordered and the loop terminates)
         bool = False
+        # loop through the list
         for i, x in enumerate(numbers):
+            # stop loop at last value
             if len(numbers) == i+1:
                 break
+            # if first number is smaller than second number swap them
             elif x < numbers[i+1]:
                 numbers[i],numbers[i+1] = numbers[i+1],numbers[i]
+                # set loop condition true, so algorithm checks list again
                 bool = True
     return numbers
 
-unordered_list = [8,4,6,10,3,4,7]
+unordered_list = [8,4,6,10,3,4,7,25]
 
 print(bubble_sort(unordered_list))
