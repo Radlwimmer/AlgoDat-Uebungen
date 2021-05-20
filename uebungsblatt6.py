@@ -1,3 +1,6 @@
+ordered_list = [3,5,6,8,10,11,11,13,16]
+unordered_list = [8,4,6,10,3,4,7,25]
+
 #---exercise 1---
 
 def binary_search(numbers:list,num:int):
@@ -21,7 +24,7 @@ def binary_search(numbers:list,num:int):
         return binary_search(numbers[x],num)
 
 
-ordered_list = [3,5,6,8,10,11,11,13,16]
+
 x = 6
 #print(binary_search(ordered_list,x))
 
@@ -45,6 +48,16 @@ def bubble_sort(numbers:list):
                 bool = True
     return numbers
 
-unordered_list = [8,4,6,10,3,4,7,25]
+#print(bubble_sort(unordered_list))
 
-print(bubble_sort(unordered_list))
+#---excercise 3---
+
+def insertions_sort(numbers:list):
+    for i, x in enumerate(numbers):
+        for j, y in enumerate(numbers):
+            print(numbers, i, j, numbers[i], numbers[j])
+            if numbers[i] > numbers[j]:
+                numbers[i],numbers[j] = numbers[j],numbers[i]
+    return numbers
+
+print(insertions_sort(unordered_list))
