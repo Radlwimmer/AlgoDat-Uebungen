@@ -15,7 +15,7 @@ def power(a:int,b:int):
 a = 2
 b = 10
 
-print(f"{a}^{b} = {power(a,b)}")
+#print(f"{a}^{b} = {power(a,b)}")
 
 
 #---exercize 2---
@@ -39,6 +39,6 @@ def binary_search(numbers:list,num:int,start:int,end:int):
         return -1
 
 ordered_list = [3,5,6,8,10,11,11,13,16]
-x = 16
+x = 8
 print(f"You can find an instance of {x} at list-index: {binary_search(ordered_list,x,0,len(ordered_list)-1)}")
 
