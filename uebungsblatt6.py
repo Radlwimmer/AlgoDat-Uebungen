@@ -53,11 +53,21 @@ def bubble_sort(numbers:list):
 #---excercise 3---
 
 def insertions_sort(numbers:list):
+    #set loop for element to be sorted
     for i, x in enumerate(numbers):
+        #set loop for elements to compare it with
         for j, y in enumerate(numbers):
-            print(numbers, i, j, numbers[i], numbers[j])
-            if numbers[i] > numbers[j]:
-                numbers[i],numbers[j] = numbers[j],numbers[i]
+            #only compare to elements that have already been sorted
+            if j == i:
+                break
+                #if an element is out of order:
+            elif numbers[i] > numbers[j]:
+                # insert it before the other element
+                numbers.insert(j,numbers[i])
+                # and remove it from the other position
+                numbers.pop(i+1)
+                # and dont compare it to other elements 
+                break
     return numbers
 
 print(insertions_sort(unordered_list))
