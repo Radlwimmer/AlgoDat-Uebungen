@@ -77,7 +77,23 @@ def insertions_sort(numbers:list):
 class HashList():
     def __init__(self, size=None):
         self.size = size
-        self.bucket = [None] * self.size
+        self.bucket = self.size*[]
 
     def insert(self, element:int):
+        self.bucket.append([element%self.size]*element)
+
+    def show_content(self):
+        for i in range(size):
+            for j in range(len(self.bucket[i])):
+                print(self.bucket[i][j], end=' ')
+            print()
+
+
+hashtable = HashList(10)
+hashtable.insert(1)
+hashtable.insert(2)
+hashtable.insert(3)
+hashtable.insert(4)
+hashtable.insert(5)
+hashtable.show_content()
 
