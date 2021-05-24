@@ -98,6 +98,7 @@ class HashList():
 
     def show_content(self):
         for i in range(self.size):
+            print(i, end=' ')
             current = self.bucket[i]
             while current:
                 val = current.data
