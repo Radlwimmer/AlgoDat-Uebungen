@@ -75,31 +75,41 @@ def insertions_sort(numbers:list):
 #---excercise 4---
 #Hash tables with hash buckets are basically arrays with linked lists
 
+# class node for linked lists
 class Node():
-    def __init__(self, data = None):
+    def __init__(self, data=None):
         self.data = data
         self.next = None
 
 class HashList():
+    # constructor sets table to fixed size
     def __init__(self, size=None):
         self.size = size
+        #set bucket as empty array
         self.bucket = self.size * [None]
 
     def insert(self, element:str):
+        #create new node for new input
         node = Node(element)
-        if self.bucket[len(element) % 10] == None:
-            self.bucket[len(element) % 10] = node
+        # index = element % size
+        # if list is empty at index, place element
+        if self.bucket[len(element) % self.size] == None:
+            self.bucket[len(element) % self.size] = node
         else:
-            current = self.bucket[len(element) % 10]
+            #go through linked list and place new node
+            current = self.bucket[len(element) % self.size]
             while current.next:
                 current = current.next
             current.next = node
 
 
     def show_content(self):
+        #go through the list
         for i in range(self.size):
+            #show in which line i am
             print(i, end=' ')
             current = self.bucket[i]
+            #go through linked list
             while current:
                 val = current.data
                 print(val, end=' ')
