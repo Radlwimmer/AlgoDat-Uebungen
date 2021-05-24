@@ -66,8 +66,18 @@ def insertions_sort(numbers:list):
                 numbers.insert(j,numbers[i])
                 # and remove it from the other position
                 numbers.pop(i+1)
-                # and dont compare it to other elements 
+                # and don't compare it to other elements
                 break
     return numbers
 
-print(insertions_sort(unordered_list))
+#print(insertions_sort(unordered_list))
+
+#---excercise 4---
+
+class HashList():
+    def __init__(self, size=None):
+        self.size = size
+        self.bucket = [None] * self.size
+
+    def insert(self, element:int):
+
