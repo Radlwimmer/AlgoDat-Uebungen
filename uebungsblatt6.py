@@ -73,7 +73,7 @@ def insertions_sort(numbers:list):
 #print(insertions_sort(unordered_list))
 
 #---excercise 4---
-#Hash tables with hash buckets are basically arrays with linked lists!!
+#Hash tables with hash buckets are basically arrays with linked lists
 
 class Node():
     def __init__(self, data = None):
@@ -87,7 +87,7 @@ class HashList():
 
     def insert(self, element:int):
         node = Node(element)
-        if self.bucket[element%10] == None:
+        if self.bucket[element % 10] == None:
             self.bucket[element % 10] = node
         else:
             current = self.bucket[element % 10]
@@ -103,13 +103,15 @@ class HashList():
                 val = current.data
                 print(val, end=' ')
                 current = current.next
-            print('a\n')
+            print()
 
 
 
 hashtable = HashList(10)
+hashtable.insert(20)
 hashtable.insert(1)
 hashtable.insert(31)
+hashtable.insert(10)
 hashtable.insert(11)
 hashtable.insert(24)
 hashtable.insert(14)
