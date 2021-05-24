@@ -85,12 +85,12 @@ class HashList():
         self.size = size
         self.bucket = self.size * [None]
 
-    def insert(self, element:int):
+    def insert(self, element:str):
         node = Node(element)
-        if self.bucket[element % 10] == None:
-            self.bucket[element % 10] = node
+        if self.bucket[len(element) % 10] == None:
+            self.bucket[len(element) % 10] = node
         else:
-            current = self.bucket[element % 10]
+            current = self.bucket[len(element) % 10]
             while current.next:
                 current = current.next
             current.next = node
@@ -108,13 +108,13 @@ class HashList():
 
 
 hashtable = HashList(10)
-hashtable.insert(20)
-hashtable.insert(1)
-hashtable.insert(31)
-hashtable.insert(10)
-hashtable.insert(11)
-hashtable.insert(24)
-hashtable.insert(14)
+hashtable.insert("Eier")
+hashtable.insert("Milch")
+hashtable.insert("Mehl")
+hashtable.insert("Erdaepfel")
+hashtable.insert("Schlagobers")
+hashtable.insert("Eis")
+hashtable.insert("Bananen")
 hashtable.show_content()
 
 
