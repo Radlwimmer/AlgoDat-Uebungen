@@ -1,3 +1,11 @@
+# https://www.w3resource.com/python-exercises/nltk/nltk-corpus-exercise-11.php
+import random
+import nltk
+#accessing text corpora
+from nltk.corpus import names
+nltk.download ('names')
+
+
 #---exercise 1---
 
 class MyQueue:
@@ -24,14 +32,20 @@ class MyQueue:
         # return list as string
         return f"{self.queue}"
 
+# create an queue instance
 Queue = MyQueue()
+# queue a message
 Queue.enqueue("hello")
 Queue.enqueue("how")
 Queue.enqueue("are")
 Queue.enqueue("you")
 Queue.enqueue("doing")
 print(Queue)
+# remove first word of message
 Queue.dequeue()
 print(Queue)
 
 #---exercise 2---
+
+def generate_names(char:str):
+    if 
