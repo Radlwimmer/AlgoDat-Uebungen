@@ -1,10 +1,3 @@
-# https://www.w3resource.com/python-exercises/nltk/nltk-corpus-exercise-11.php
-import random
-import nltk
-from nltk.corpus import names
-nltk.download('names')
-
-
 #---exercise 1---
 
 class MyQueue:
@@ -47,29 +40,4 @@ def testing():
 
 testing()
 
-
-
-
-
-#---exercise 2---
-
-def char_input():
-
-    while True:
-        # input() automatically returns a string
-        char = input("Please enter a single letter: ")
-        if len(char) > 1:
-            print("Please enter a SINGLE letter!")
-        elif char.isalpha() == False:
-            print("Please enter a single LETTER!")
-        else:
-            break
-    return char
-
-
-def generate_names(char:str):
-    print("Hello")
-
-
-generate_names(char_input())
 
