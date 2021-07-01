@@ -32,11 +32,14 @@ def char_input():
 
 
 def generate_names(char:str):
+    #fill a list with names that start with the right letter (loops through existing list)
     list_female = [name for name in female_names if name[0] == char]
     list_male = [name for name in male_names if name[0] == char]
 
+    #check if list is empty
     if list_female == []:
         print(f"There are no female names starting with {char}")
+    #if not, output the first 10 names
     else:
         print(f"Female names starting with {char}:")
         print(list_female[:10])
