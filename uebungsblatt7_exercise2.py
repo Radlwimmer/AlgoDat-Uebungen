@@ -27,7 +27,8 @@ def char_input():
             print("Please enter a single LETTER!")
         else:
             break
-    return char
+    #capitalize letter
+    return char.upper()
 
 
 def generate_names(char:str):
@@ -37,10 +38,12 @@ def generate_names(char:str):
     if list_female == []:
         print(f"There are no female names starting with {char}")
     else:
+        print(f"Female names starting with {char}:")
         print(list_female[:10])
     if list_male == []:
         print(f"There are no male names starting with {char}")
     else:
+        print(f"Male names starting with {char}:")
         print(list_male[:10])
 
 
