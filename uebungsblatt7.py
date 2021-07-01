@@ -56,9 +56,12 @@ testing()
 def char_input():
 
     while True:
-        char = input("Please enter a character: ")
-        if type(eval(char)) != str:
-            print("Please enter a character")
+        # input() automatically returns a string
+        char = input("Please enter a single letter: ")
+        if len(char) > 1:
+            print("Please enter a SINGLE letter!")
+        elif char.isalpha() == False:
+            print("Please enter a single LETTER!")
         else:
             break
     return char
