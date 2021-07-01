@@ -31,7 +31,17 @@ def char_input():
 
 
 def generate_names(char:str):
-    print("Hello")
+    list_female = [name for name in female_names if name[0] == char]
+    list_male = [name for name in male_names if name[0] == char]
+
+    if list_female == []:
+        print(f"There are no female names starting with {char}")
+    else:
+        print(list_female[:10])
+    if list_male == []:
+        print(f"There are no male names starting with {char}")
+    else:
+        print(list_male[:10])
 
 
 generate_names(char_input())
