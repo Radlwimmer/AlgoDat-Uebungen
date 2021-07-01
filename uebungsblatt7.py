@@ -1,9 +1,8 @@
 # https://www.w3resource.com/python-exercises/nltk/nltk-corpus-exercise-11.php
 import random
 import nltk
-#accessing text corpora
 from nltk.corpus import names
-nltk.download ('names')
+nltk.download('names')
 
 
 #---exercise 1---
@@ -32,20 +31,42 @@ class MyQueue:
         # return list as string
         return f"{self.queue}"
 
-# create an queue instance
-Queue = MyQueue()
-# queue a message
-Queue.enqueue("hello")
-Queue.enqueue("how")
-Queue.enqueue("are")
-Queue.enqueue("you")
-Queue.enqueue("doing")
-print(Queue)
-# remove first word of message
-Queue.dequeue()
-print(Queue)
+def testing():
+    # create an queue instance
+    Queue = MyQueue()
+    # queue a message
+    Queue.enqueue("hello")
+    Queue.enqueue("how")
+    Queue.enqueue("are")
+    Queue.enqueue("you")
+    Queue.enqueue("doing")
+    print(Queue)
+    # remove first word of message
+    Queue.dequeue()
+    print(Queue)
+
+testing()
+
+
+
+
 
 #---exercise 2---
 
+def char_input():
+
+    while True:
+        char = input("Please enter a character: ")
+        if type(eval(char)) != str:
+            print("Please enter a character")
+        else:
+            break
+    return char
+
+
 def generate_names(char:str):
-    if 
+    print("Hello")
+
+
+generate_names(char_input())
+
